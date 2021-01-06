@@ -32,19 +32,19 @@ export const constantRouterMap = [
       }
     ]
   },
-  {
-    path: '/',
-    component: Layout,
-    redirect: '/dashboard',
-    children: [
-      {
-        path: 'dashboard',
-        component: () => import('@/views/home'),
-        name: 'Dashboard',
-        meta: { title: '首页', icon: 'index', affix: true, noCache: true }
-      }
-    ]
-  },
+  // {
+  //   path: '/',
+  //   component: Layout,
+  //   redirect: '/dashboard',
+  //   children: [
+  //     {
+  //       path: 'dashboard',
+  //       component: () => import('@/views/home'),
+  //       name: 'Dashboard',
+  //       meta: { title: '首页', icon: 'index', affix: true, noCache: true }
+  //     }
+  //   ]
+  // },
   {
     path: '/account',
     component: Layout,
@@ -147,6 +147,24 @@ export const constantRouterMap = [
         component: () => import('@/views/oem/applicationAgency'),
         name: 'ApplicationAgency',
         meta: { title: '申请代理' }
+      }
+    ]
+  },{
+    path: '/user',
+    component: Layout,
+    hidden: true,
+    redirect: 'noRedirect',
+    children: [
+      {
+        path: 'apply_income',
+        component: () => import('@/views/user/apply_income'),
+        name: 'Apply_income',
+        meta: { title: '提现到支付宝或银行卡' }
+      },{
+        path: 'apply_to_myamount',
+        component: () => import('@/views/user/apply_to_myamount'),
+        name: 'Apply_to_myamount',
+        meta: { title: '收益转入平台帐号余额  ' }
       }
     ]
   }

@@ -8,7 +8,7 @@
               <p class="left-container-title">账号概况</p>
               <el-row :gutter="20">
                 <el-col :span="6">
-                  <div class="grid-content bg-purple">代理商级别 账号：15875865540</div>
+                  <router-link to="/account/setting"><div class="grid-content bg-purple">代理商级别 账号：15875865540</div></router-link>
                 </el-col>
                 <el-col :span="6">
                   <div class="grid-content bg-purple">消费余额：45.00元</div>

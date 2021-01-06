@@ -8,7 +8,7 @@ module.exports = [{
         "code": 0,
         "message": "操作成功",
         "data": [{
-          "path": "",
+          "path": "/",
           "component": "Layout",
           "children": [{
             "name": "Console",
@@ -16,7 +16,7 @@ module.exports = [{
             "component": "console",
             "meta": {
               "title": "控制台",
-              "icon": "dictionary",
+              "icon": "console-k",
               "noCache": true,
             }
           }]
@@ -26,7 +26,7 @@ module.exports = [{
           "name": "SwitchingPlatforms",
           "meta": {
             "title": "切换管理平台",
-            "icon": "system",
+            "icon": "switch-k",
             "noCache": true
           },
           "children": [{
@@ -36,7 +36,6 @@ module.exports = [{
               "flatform": 1,
               "meta": {
                 "title": "广告营销平台",
-                "icon": "dictionary",
                 "noCache": true,
               }
             },
@@ -47,7 +46,6 @@ module.exports = [{
               "flatform": 2,
               "meta": {
                 "title": "媒体接单平台",
-                "icon": "resource",
                 "noCache": true,
               }
             },
@@ -58,7 +56,6 @@ module.exports = [{
               "flatform": 3,
               "meta": {
                 "title": "定制代理平台",
-                "icon": "resource",
                 "noCache": true,
               }
             }
@@ -71,7 +68,7 @@ module.exports = [{
           "flatform_type": 1,
           "meta": {
             "title": "选择软文发布平台",
-            "icon": "system",
+            "icon": "choice-k",
             "noCache": true,
           },
           "children": [{
@@ -137,7 +134,7 @@ module.exports = [{
           "flatform_type": 2,
           "meta": {
             "title": "我的资源管理",
-            "icon": "system",
+            "icon": "resource-k",
             "noCache": true,
           },
           "children": [{
@@ -197,6 +194,62 @@ module.exports = [{
               "noCache": true
             }
           }]
+        },{
+          "path": "/account-management",
+          "component": "Layout",
+          "name": "account-management",
+          "hidden": false,
+          "meta": {
+            "title": "我的帐号管理",
+            "icon": "account-k",
+            "noCache": true
+          },
+          "children": [{
+              "name": "getMediaList",
+              "path": "/getMediaList",
+              "component": "account-management/getMediaList",
+              "meta": {
+                "title": "我的收藏",
+                "noCache": true
+              }
+            },{
+              "name": "email_note",
+              "path": "/email_note",
+              "component": "account-management/email_note",
+              "meta": {
+                "title": "设置邮件提醒",
+                "noCache": true
+              }
+            }
+          ]
+        },{
+          "path": "/amount-order",
+          "component": "Layout",
+          "name": "amount-order",
+          "hidden": false,
+          "meta": {
+            "title": "我的财务管理",
+            "icon": "finance-k",
+            "noCache": true
+          },
+          "children": [{
+              "name": "to_pay",
+              "path": "/to_pay",
+              "component": "amount-order/to_pay",
+              "meta": {
+                "title": "我要充值",
+                "noCache": true
+              }
+            },{
+              "name": "my_amount_report",
+              "path": "/my_amount_report",
+              "component": "amount-order/my_amount_report",
+              "meta": {
+                "title": "消费财务报表",
+                "noCache": true
+              }
+            }
+          ]
         }, {
           "path": "/oem",
           "component": "Layout",
@@ -205,7 +258,7 @@ module.exports = [{
           "flatform_type": 3,
           "meta": {
             "title": " 我的代理管理",
-            "icon": "system",
+            "icon": "agent-k",
             "noCache": true,
           },
           "children": [{
@@ -216,8 +269,56 @@ module.exports = [{
               "title": "定制代理平台",
               "noCache": true
             }
+          }, {
+            "name": "My_income",
+            "path": "/my_income",
+            "component": "oem/my_income",
+            "meta": {
+              "title": " 我的代理收益",
+              "noCache": true
+            }
+          }, {
+            "name": "Price_set",
+            "path": "/price_set",
+            "component": "oem/price_set",
+            "meta": {
+              "title": "设置对外价格",
+              "noCache": true
+            }
+          }, {
+            "name": "IncomeDetails",
+            "path": "/incomeDetails",
+            "component": "oem/incomeDetails",
+            "meta": {
+              "title": "发稿收益明细",
+              "noCache": true
+            }
+          }, {
+            "name": "My_agent_list",
+            "path": "/my_agent_list",
+            "component": "oem/my_agent_list",
+            "meta": {
+              "title": "我的分销代理",
+              "noCache": true
+            }
+          }, {
+            "name": "Oem_user_list",
+            "path": "/oem_user_list",
+            "component": "oem/oem_user_list",
+            "meta": {
+              "title": "我的客户管理",
+              "noCache": true
+            }
+          }, {
+            "name": "My_link",
+            "path": "/my_link",
+            "component": "oem/my_link",
+            "meta": {
+              "title": "我的推广链接",
+              "noCache": true
+            }
           }]
-        }, {
+        },  {
           "path": "/ruanwen-management",
           "component": "Layout",
           "name": "ruanwen-management",
@@ -225,7 +326,7 @@ module.exports = [{
           "flatform_type": 1,
           "meta": {
             "title": "软文营销管理",
-            "icon": "system",
+            "icon": "ruanwen-marketing-k",
             "noCache": true
           },
           "children": [{
@@ -234,7 +335,6 @@ module.exports = [{
               "component": "ruanwen-management/post_select",
               "meta": {
                 "title": "创建订单活动",
-                "icon": "dictionary",
                 "noCache": true
               }
             },
@@ -244,7 +344,6 @@ module.exports = [{
               "component": "ruanwen-management/my_ruanwen_list",
               "meta": {
                 "title": "订单进度查询",
-                "icon": "resource",
                 "noCache": true,
               }
             }
@@ -253,12 +352,12 @@ module.exports = [{
         }, {
           "path": "/media-management",
           "component": "Layout",
-          "name": "ruanwen-management",
+          "name": "media-management",
           "hidden": true,
           "flatform_type": 2,
           "meta": {
             "title": "媒体营销管理",
-            "icon": "system",
+            "icon": "media-marketing-k",
             "noCache": true
           },
           "children": [{
@@ -267,7 +366,6 @@ module.exports = [{
               "component": "media-management/pay_record_list",
               "meta": {
                 "title": "订单结算提现",
-                "icon": "dictionary",
                 "noCache": true
               }
             },
@@ -277,8 +375,34 @@ module.exports = [{
               "component": "media-management/my_order_list",
               "meta": {
                 "title": "我的订单列表",
-                "icon": "resource",
                 "noCache": true,
+              }
+            }
+          ]
+        }, {
+          "path": "/help-document",
+          "component": "Layout",
+          "name": "help-document",
+          "meta": {
+            "title": "帮组及文档",
+            "icon": "help-document-k",
+            "noCache": true
+          },
+          "children": [{
+              "name": "20500",
+              "path": "/20500",
+              "component": "help-document/20500",
+              "meta": {
+                "title": "发布注意事项",
+                "noCache": true
+              }
+            },{
+              "name": "22984",
+              "path": "/22984",
+              "component": "help-document/22984",
+              "meta": {
+                "title": "发稿来源白名单",
+                "noCache": true
               }
             }
           ]
